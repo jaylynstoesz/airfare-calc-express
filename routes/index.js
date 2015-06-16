@@ -15,7 +15,7 @@ router.post('/', function(req, res, next) {
   var disc = req.body.disCode;
   var price = calc.discount(disc) * calc.routeCost(depCity, arrCity) + calc.classCost(classSel) + calc.bagsCost(bagsNum) + calc.wifiCost(weefee);
 
-  res.render('index', {output: "The cost of your flight is $" + price});
+  res.render('index', {title: "Air Travel Calculator", output: "The cost of your flight is $" + price});
 });
 
 

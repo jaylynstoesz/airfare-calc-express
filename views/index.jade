@@ -4,39 +4,39 @@ block content
   h3 Built with Express
   br
   h1 Air Travel Calculator
-  form(action="", method="post")
+  form(action="/", method="post")
      .section
        label(for='departure') Departure City
           br
-         select(name='departure')
+         select(id="departure", name='departure')
            option(value='newyork') New York
            option(value='chicago') Chicago
            option(value='losangeles') Los Angeles
      .section
        label(for='arrival') Arrival City
           br
-         select(name='arrival')
+         select(id="arrival", name='arrival')
            option(value='newyork') New York
            option(value='chicago') Chicago
            option(value='losangeles') Los Angeles
      .section
        label(for='flightClass') Class
           br
-         select(name='flightClass')
+         select(id="flightClass", name='flightClass')
            option(value='coach') Coach
            option(value='business') Business
            option(value='first') First
       .section
         label(for='bags') Number of checked bags ($25 per bag)
           br
-          input(type='number', name='bags', placeholder='0')
+          input(id="bags", type='number', name='bags', placeholder='0')
       .section
-        input(type='checkbox', name='wifi')
+        input(id="wifi", type='checkbox', name='wifi')
         label(for='wifi') Wifi ($12)
       .section
         label(for='disCode') Discount code
           br
-          input(type='text', name='disCode')
+          input(type='text', id="disCode", name='disCode')
 
      input.submit(type='submit', name='submit', value='Calculate Price')
     p#output= output
